@@ -102,7 +102,7 @@ public class Library
         {
             System.out.println("Enter your choice:");
             System.out.println("1. Search a Book");
-            System.out.println("2. Get Book Details");
+            System.out.println("2. Get Book Details(Your Checked in Books only)");
             System.out.println("3. Exit the digital library");
             int ch = sc.nextInt();
 
@@ -114,6 +114,7 @@ public class Library
                     String name = sc.nextLine();
                     System.out.println("Enter the name of the author:");
                     String author = sc.nextLine();
+                    System.out.println("Book Found!!!");
                     System.out.println("Do you want to check in this book?");
                     System.out.println("Type 'YES' for yes or 'NO' for no");
                     String confirmation = sc.nextLine();
@@ -130,7 +131,7 @@ public class Library
                     break;
                 case 2:
                     sc.nextLine();
-                    System.out.println("Enter the name of the book:");
+                    System.out.println("Enter the name of the book that you checked in:");
                     String bookName = sc.nextLine();
                     boolean found = false;
                     for (LibraryRecords book : books) 
